@@ -1,5 +1,6 @@
-# install-wireguard-docker
-Bash script for simple and fast install wireguard vpn on ubuntu
+# deploy-wireguard-docker
+Bash script for simple and fast deployment of wireguard vpn on ubuntu
+* separate user
 
 Run to install:
 
