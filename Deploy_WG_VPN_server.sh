@@ -6,13 +6,19 @@ sudo apt update \
 
 sudo apt upgrade -y 
 
+echo '>'
+echo '>sudo apt install docker.io docker-compose -y'
 sudo apt install docker.io docker-compose -y
 #curl https://get.docker.com -o install.sh && sudo sh install.sh
 
+echo '>'
+echo '>docker-compose --version'
 docker-compose --version
 
 sudo gpasswd -a usernamewg docker
 
+echo '>'
+echo '>sudo mkdir -p /app/vpn/wireguard'
 sudo mkdir -p /app/vpn/wireguard
 sudo chown -R usernamewg:usernamewg /app/vpn/wireguard
 sudo mkdir -p /app/vpn/wireguard/config
@@ -21,6 +27,8 @@ sudo chown -R usernamewg:usernamewg /app/vpn/wireguard/config
 cd /app/vpn/wireguard
 #nano docker-compose.yml
 
+echo '>'
+echo '>cat << EOF > /app/vpn/wireguard/docker-compose.yml'
 cat << EOF > /app/vpn/wireguard/docker-compose.yml
 ---
 version: "2.1"
@@ -52,6 +60,11 @@ services:
 EOF
 
 cd /app/vpn/wireguard
+echo '>'
+echo '>sudo docker-compose -f /app/vpn/wireguard/docker-compose.yml up -d'
 sudo docker-compose -f /app/vpn/wireguard/docker-compose.yml up -d
+
+echo '>'
+echo '>docker ps'
 
 docker ps
