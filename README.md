@@ -5,5 +5,5 @@ Bash script for simple and fast deployment of wireguard vpn on ubuntu
 Run to install:
 
 ```bash
-sh -c "$(wget https://raw.githubusercontent.com/igancev/install-wireguard-docker/master/installVpn.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/vespexx/deploy-wireguard-docker/main/Deploy_WG_VPN_server.sh?token=GHSAT0AAAAAABVBOTJUXEGBCOSUKKNB2X34YU6LJSA -O -)"
 ```
